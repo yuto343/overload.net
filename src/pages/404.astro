@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import Header from "../components/header.astro";
+import Layout from "../layouts/layout.astro";
+import notFoundImage from "../assets/404.webp";
+import Footer from "../components/footer.astro";
+---
+
+<Layout>
+  <Header />
+  <div>
+    <Image src={notFoundImage} alt={"404 not found イメージ"} width={300} />
+    <h2>404</h2>
+    <p>お探しのページは存在しないか、URLが間違っている可能性があります。</p>
+  </div>
+  <Footer />
+</Layout>
+
+<style>
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-l);
+  }
+  p {
+    max-width: 580px;
+    width: 90%;
+    text-align: center;
+  }
+</style>
