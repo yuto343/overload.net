@@ -1,0 +1,66 @@
+---
+import { Image } from "astro:assets";
+import LogoWithText from "./shared/logo-with-text.astro";
+import IconMail from "./icons/mail.svelte";
+import IconX from "./icons/x.svelte";
+---
+
+<footer>
+  <h3><span></span>お問い合わせ先<span></span></h3>
+  <div class="container">
+    <a href="mailto:yutopia898@gmail.com">
+      <IconMail size={24} />
+      メール
+    </a>
+    <a href="https://x.com/uchoco898">
+      <IconX size={24} />
+      @uchoco898</a
+    >
+  </div>
+  <div class="logo">
+    <LogoWithText />
+  </div>
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-3xl);
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-m);
+  }
+  h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fontsize-m);
+    gap: var(--spacing-s);
+
+    & > span {
+      display: block;
+      width: 40px;
+      height: 2px;
+      background: var(--gradient-primary);
+    }
+  }
+  a {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-s);
+    color: var(--color-white);
+    text-decoration: underline;
+    &:hover {
+      color: var(--color-red);
+    }
+  }
+  .logo {
+    text-align: center;
+  }
+</style>

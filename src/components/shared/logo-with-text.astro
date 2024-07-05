@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+import overloadLogo from "../../assets/overload.png";
+---
+
+<div>
+  <Image src={overloadLogo} alt="overload logo" width={50} />
+  <span>OVERLOAD</span>
+</div>
+
+<style>
+  div {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-s);
+    & > span {
+      font-size: var(--fontsize-2xl);
+      font-family: var(--font-iconic);
+      font-style: italic;
+      font-weight: 600;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+</style>
